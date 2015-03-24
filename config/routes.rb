@@ -1,7 +1,7 @@
-Humon::Application.routes.draw do
+HumonApi::Application.routes.draw do
   scope module: :api, defaults: { format: 'json' } do
     namespace :v1 do
-      # resources go here
+      resources :events, only: [:show]
     end
   end
 end
